@@ -46,7 +46,7 @@ app.use('/', require('./server/route/main'));
 app.use('/', require('./server/route/admin'));
 
 app.get('/', (req,res) => {
-  res.render(index);
+  res.render('./views/layouts/index.ejs');
 });
 
 app.listen(PORT, ()=> {
