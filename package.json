@@ -6,7 +6,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "app.js",
     "dev": "nodemon app.js",
-    "build": "C:\\blogapp\\views\\admin\\index.ejs > index.html"
+    "build": "C:\\blogapp\\views\\admin\\index.ejs > dist/index.html"
   },
   "keywords": [],
   "author": "",
