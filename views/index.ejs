@@ -1,0 +1,32 @@
+<div class="author">
+    <h1 class="author__heading">Hi, I am Vishal</h1>
+    <p class = "author__body">Web Developer</p>
+</div>
+
+<img src="/img/DALL·E 2024-08-27 16.22.19 - A cartoon-style image of a person lying down on a hammock. The person is relaxed, with a peaceful expression, wearing casual clothes like a t-shirt an.webp" alt="" width="981" height="528">
+
+<section class ="articles">
+    <h2 class = "articles__heading">Latest Posts</h2>
+
+    <ul class="article-ul">
+
+
+        <% data.forEach(post => { %>
+         
+        <li>
+            <a href="/post/<%= post._id %>">
+                <span><%= post.title %></span>
+                <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+            </a>
+        </li>
+        <% }) %>
+
+    </ul>
+
+    <% if (nextPage !== null) { %>
+        <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Pots</a>
+    <% } %> 
+     
+
+    
+</section>
