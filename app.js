@@ -45,6 +45,11 @@ app.locals.isActiveRoute = isActiveRoute;
 app.use('/', require('./server/route/main'));
 app.use('/', require('./server/route/admin'));
 
+app.get('/', (req) => {
+  const currentRoute = req.path; // Get the current route from the request
+  res.render('index', { currentRoute }); // Pass currentRoute and isActiveRoute to the template
+});
+
 app.listen(PORT, ()=> {
   console.log(`App listening on port ${PORT}`);
 });
