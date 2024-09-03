@@ -45,6 +45,10 @@ app.locals.isActiveRoute = isActiveRoute;
 app.use('/', require('./server/route/main'));
 app.use('/', require('./server/route/admin'));
 
+app.get('/', (req,res) => {
+  res.render(index);
+});
+
 app.listen(PORT, ()=> {
   console.log(`App listening on port ${PORT}`);
 });
