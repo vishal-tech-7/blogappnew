@@ -49,6 +49,10 @@ app.get('/', (req,res) => {
   res.render('./views/layouts/index.ejs');
 });
 
+app.get('/login', (req,res) => {
+  res.render('./views/admin/index.ejs');
+});
+
 app.listen(PORT, ()=> {
   console.log(`App listening on port ${PORT}`);
 });
